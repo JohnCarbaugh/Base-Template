@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 interface Props {
     className?: string;
+
+    padding?: string;
 }
 
 class ContentWrapper extends React.Component<Props> {
@@ -24,5 +26,7 @@ export default styled(ContentWrapper)`
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: ${(props) => props.theme.background};
+    padding: ${(props) => props.padding ? props.padding : "0"};
+
+    background-color: ${(props) => props.theme.tertiary};
 `;

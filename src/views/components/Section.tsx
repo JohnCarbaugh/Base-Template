@@ -4,6 +4,8 @@ import styled from 'styled-components';
 interface Props {
     className?: string;
     text: string;
+
+    margin?: string;
 }
 
 class Section extends React.Component<Props> {
@@ -23,6 +25,9 @@ export default styled(Section)`
     justify-content: center;
     flex: 1;
     transition: 0.2s;
-    color: ${props => props.theme.foregroundFont};
-    background-color: ${props => props.theme.foreground};
+
+    margin: ${(props) => props.margin ? props.margin : "0" };
+
+    color: ${props => props.theme.quaternaryFont};
+    background-color: ${props => props.theme.quaternary};
 `

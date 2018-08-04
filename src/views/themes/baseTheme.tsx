@@ -22,16 +22,16 @@ const baseTheme: Theme = {
     secondaryDivider: '#',
 
     // Main Background
-    tertiary: '#',
-    tertiaryHover: '#',
-    tertiaryPressed: '#',
+    tertiary: '#3C4452',
+    tertiaryHover: '#525c6f',
+    tertiaryPressed: '#262c35',
     tertiaryFont: '#',
     tertiaryHoverFont: '#',
     tertiaryPressedFont: '#',
     tertiaryDivider: '#',
 
     // Main Foreground
-    quaternary: '#',
+    quaternary: '#353C48',
     quaternaryHover: '#',
     quaternaryPressed: '#',
     quaternaryFont: '#',

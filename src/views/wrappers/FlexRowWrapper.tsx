@@ -19,6 +19,7 @@ interface Props {
 
     marginRight?: number;
     marginLeft?: number;
+    margin?: string;
 
 }
 
@@ -56,4 +57,5 @@ export default styled(FlexRowWrapper)`
 
     margin-right: ${(props) => props.marginRight ? String(props.marginRight) + "px" : "0px" };
     margin-left: ${(props) => props.marginLeft ? String(props.marginLeft) + "px" : "0px" };
+    margin: ${(props) => props.margin ? props.margin : "0" };
 `;
