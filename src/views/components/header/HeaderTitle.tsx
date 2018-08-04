@@ -10,7 +10,7 @@ class HeaderTitle extends React.Component<Props> {
     return (
         <div className={this.props.className} >
             {/* <img src={logo} /> */}
-            <span>Company</span>
+            <span>Metrix</span>
         </div>
     );
   }

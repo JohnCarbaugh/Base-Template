@@ -4,7 +4,7 @@ import { RouteComponentProps } from "react-router";
 import { bindActionCreators, Dispatch } from "redux";
 import { RootState } from "../../state/rootReducer";
 
-import TopicTwoContent from "../content/TopicTwoContent";
+import MetricsContent from "../content/MetricsContent";
 
 interface EditBomPageProps {
     className?: string;
@@ -21,7 +21,7 @@ interface PropsFromDispatch {
 type Props = EditBomPageProps & PropsFromState & PropsFromDispatch & RouteComponentProps<{id: string}>;
 type State = never;
 
-class EditBomPage extends React.PureComponent<Props, State> {
+class MetricsPage extends React.PureComponent<Props, State> {
     
     public componentWillMount() {
         //
@@ -33,7 +33,7 @@ class EditBomPage extends React.PureComponent<Props, State> {
 
     public render() {
         return (
-            <TopicTwoContent />
+            <MetricsContent />
         )
     }
 }
@@ -46,4 +46,4 @@ const mapDispatchToProps = (dispatch: Dispatch<RootState>): PropsFromDispatch =>
     //
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditBomPage)
+export default connect(mapStateToProps, mapDispatchToProps)(MetricsPage)

@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 import { bindActionCreators, Dispatch } from "redux";
 import { RootState } from "../../state/rootReducer";
 
-import TopicOneContent from "../content/TopicOneContent";
+import DashboardContent from "../content/DashboardContent";
 
 interface BomListPageProps {
     className?: string;
@@ -21,7 +21,7 @@ interface PropsFromDispatch {
 type Props = BomListPageProps & PropsFromState & PropsFromDispatch;
 type State = never;
 
-class BomListPage extends React.PureComponent<Props, State> {
+class DashboardPage extends React.PureComponent<Props, State> {
 
     constructor(props: Props) {
         super(props);
@@ -37,7 +37,7 @@ class BomListPage extends React.PureComponent<Props, State> {
 
     public render() {
         return (
-            <TopicOneContent />
+            <DashboardContent />
         )
     }
 
@@ -55,4 +55,4 @@ const mapDispatchToProps = (dispatch: Dispatch<RootState>): PropsFromDispatch =>
     push,
 }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(BomListPage)
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardPage)

@@ -7,7 +7,7 @@ interface Props {
     className?: string;
 }
 
-class TopicTwoContent extends React.Component<Props> {
+class MetricsContent extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
     }
@@ -17,14 +17,14 @@ class TopicTwoContent extends React.Component<Props> {
         return (
             <div id="topic-two-content" className={className}>
                 <div className="detail" >
-                    <Section text={"Topic Two"}/>
+                    <Section text={"Metrics"}/>
                 </div>
             </div>
         );
     }
 }
 
-export default styled(TopicTwoContent)`
+export default styled(MetricsContent)`
     display: flex;
     flex-direction: row;
     flex: 1;

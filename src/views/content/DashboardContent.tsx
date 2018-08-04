@@ -7,7 +7,7 @@ interface Props {
     className?: string;
 }
 
-class TopicOneContent extends React.Component<Props> {
+class DashboardContent extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
     }
@@ -17,14 +17,14 @@ class TopicOneContent extends React.Component<Props> {
         return (
             <div id="topic-one-content" className={className}>
                 <div className="detail" >
-                    <Section text={"Topic One"}/>
+                    <Section text={"Dashboard"}/>
                 </div>
             </div>
         );
     }
 }
 
-export default styled(TopicOneContent)`
+export default styled(DashboardContent)`
     display: flex;
     flex-direction: row;
     flex: 1;

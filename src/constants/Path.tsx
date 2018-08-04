@@ -1,6 +1,8 @@
 export const enum Path {
-    topicOne = "/topic-one",
-    topicTwo = "/topic-two",
+    dashboard = "/dashboard",
+    metrics = "/metrics",
+    teams = "/teams",
+    discussion = "/discussion",
     home = "/",
     other = "*",
 }

@@ -48,6 +48,7 @@ export default styled(HeaderButton)`
 
     &:hover {
         cursor: pointer;
+        color: ${props => props.theme.primaryHoverFont};
         background-color: ${props => props.theme.primaryHover};
     }
 `

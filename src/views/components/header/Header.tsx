@@ -61,7 +61,7 @@ class HeaderBar extends React.Component<Props> {
 }
 
 const StyledNavbar = styled(HeaderBar)`
-    height: 45px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;

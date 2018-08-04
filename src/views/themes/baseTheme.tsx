@@ -7,18 +7,18 @@ const baseTheme: Theme = {
     primary: '#4C5667',
     primaryHover: '#626f84',
     primraryPressed: '#363d4a',
-    primaryFont: '#363d4a',
-    primaryHoverFont: '#566176',
+    primaryFont: '#D2D5D9',
+    primaryHoverFont: '#e0e2e5',
     primaryPressedFont: '#20252d',
     primaryDivider: '#16191e',
 
     // Subheader / navigation
-    secondary: '#',
-    secondaryHover: '#',
-    secondaryPressed: '#',
-    secondaryFont: '#',
-    secondaryHoverFont: '#',
-    secondaryPressedFont: '#',
+    secondary: '#353C48',
+    secondaryHover: '#4b5465',
+    secondaryPressed: '#1f242b',
+    secondaryFont: '#8992A8',
+    secondaryHoverFont: '#b5bbc8',
+    secondaryPressedFont: '#6c7792',
     secondaryDivider: '#',
 
     // Main Background

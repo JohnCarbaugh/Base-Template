@@ -21,8 +21,8 @@ class ContentWrapper extends React.Component<Props> {
 }
 
 export default styled(ContentWrapper)`
-    flex: 1;
     display: flex;
     flex-direction: column;
+    flex: 1;
     background-color: ${(props) => props.theme.background};
 `;
