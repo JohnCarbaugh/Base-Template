@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import SubHeaderButton from './SubHeaderButton';
 
-import Path from "../../../constants/Path";
+import { Path } from "../../../constants/Path";
 
 interface Props {
     className?: string;
@@ -15,8 +15,8 @@ interface Props {
 class SubHeader extends React.Component<Props> {
     constructor(props: Props) {
         super(props);
-        this.handleTopicOneClick = this.handleTopicOneClick.bind(this);
-        this.handleTopicTwoClick = this.handleTopicTwoClick.bind(this);
+        this.onTopicOneClick = this.onTopicOneClick.bind(this);
+        this.onTopicTwoClick = this.onTopicTwoClick.bind(this);
     }
 
     public render() {
@@ -30,25 +30,25 @@ class SubHeader extends React.Component<Props> {
                         isActive={location === Path.topicOne ? Path.topicOne : ""}
                         text={"Topic One"}
                         // icon={"description"}
-                        onClick={this.handleTopicOneClick}
+                        onClick={this.onTopicOneClick}
                     />
                     <SubHeaderButton
                         isActive={location === Path.topicTwo ? Path.topicTwo : ""}
                         text={"Topic Two"}
                         // icon={"note_add"}
-                        onClick={this.handleTopicTwoClick}
+                        onClick={this.onTopicTwoClick}
                     />
                 </ul>
             </div>
         );
     }
 
-    private handleTopicOneClick() {
+    private onTopicOneClick() {
         const { topicOneClick } = this.props;
         if (topicOneClick) {topicOneClick();}
     }
 
-    private handleTopicTwoClick() {
+    private onTopicTwoClick() {
         const { topicTwoClick } = this.props;
         if (topicTwoClick) {topicTwoClick();}
     }

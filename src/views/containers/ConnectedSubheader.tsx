@@ -7,7 +7,7 @@ import { RootState } from "../../state/rootReducer";
 
 import SubHeader from "../components/header/SubHeader"
 
-import Path from "../../constants/Path";
+import { Path } from "../../constants/Path";
 
 // tslint:disable no-empty-interface
 export interface HeaderContainerProps {

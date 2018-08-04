@@ -7,23 +7,25 @@ import 'rxjs'; // <- DO NOT MOVE DOWN
 import history from './state/history';
 import store from './state/store';
 
-import HeaderContainer from "./views/containers/HeaderContainer";
-import SubHeaderContainer from "./views/containers/SubHeaderContainer";
+import ConnectedHeader from "./views/containers/ConnectedHeader";
+import ConnectedSubheader from "./views/containers/ConnectedSubheader";
+import ConnectedThemeProvider from "./views/containers/ConnectedThemeProvider";
 
 import Page404 from "./views/pages/Page404";
 import TopicOneContainer from "./views/pages/TopicOnePage";
 import TopicTwoContainer from "./views/pages/TopicTwoPage";
 
-import Path from "./constants/Path";
+import { Path } from "./constants/Path";
 
 import './index.css';
 
 ReactDOM.render(
     <Provider store={store}>
+        <ConnectedThemeProvider>
             <ConnectedRouter history={history}>
                 <div className="app">
-                    <HeaderContainer />
-                    <SubHeaderContainer />
+                    <ConnectedHeader />
+                    <ConnectedSubheader />
                     <Switch>
                         <Route path={Path.topicOne} component={TopicOneContainer} />
                         <Route path={Path.topicTwo} component={TopicTwoContainer} />
@@ -32,6 +34,7 @@ ReactDOM.render(
                     </Switch>
                 </div>
             </ConnectedRouter>
+        </ConnectedThemeProvider>
     </Provider>,
     document.getElementById('root') as HTMLElement
 );
