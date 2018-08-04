@@ -3,27 +3,29 @@ import styled from 'styled-components';
 
 interface Props {
     className?: string;
-    text: string;
 
     margin?: string;
 }
 
-class Section extends React.Component<Props> {
+class BoxWrapper extends React.Component<Props> {
     public render() {
-        const { className, text } = this.props;
+        const { className } = this.props;
         return (
             <div id="box" className={className} >
-                {text}
+                {this.props.children}
             </div>
         );
     }
 }
 
-export default styled(Section)`
+export default styled(BoxWrapper)`
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1;
+
+    overflow: hidden;
+
     transition: 0.2s;
 
     margin: ${(props) => props.margin ? props.margin : "0" };

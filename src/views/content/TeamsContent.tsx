@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Section from "../components/Section";
+// import Section from "../components/Section";
 import ContentWrapper from '../wrappers/ContentWrapper';
 
 interface Props {
@@ -15,10 +15,9 @@ class TeamsContent extends React.Component<Props> {
     public render() {
         return (
             <ContentWrapper>
-                
-                <Section text={"1"}/>
+                {/* <Section text={"1"}/>
                 <Section text={"2"}/>
-                <Section text={"3"}/>
+                <Section text={"3"}/> */}
             </ContentWrapper>
         );
     }

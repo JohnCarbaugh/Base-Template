@@ -8,6 +8,10 @@ interface Props {
     alignItems?: string;
     position?: string;
 
+    flexWrap?: string;
+    
+    minWidth?: number;
+
     height?: number;
     minHeight?: number;
 
@@ -40,6 +44,7 @@ class FlexRowWrapper extends React.Component<Props> {
 
 export default styled(FlexRowWrapper)`
     flex: 1;
+    flex-wrap: ${(props) => props.flexWrap ? props.flexWrap : "nowrap" };
     display: flex;
     flex-direction: row;
     justify-content: ${(props) => props.justifyContent ? String(props.justifyContent) : "flex-start" };
@@ -48,6 +53,8 @@ export default styled(FlexRowWrapper)`
 
     min-height: ${(props) => props.minHeight ? String(props.minHeight) + "px" : "auto" };
     height: ${(props) => props.height ? String(props.height) + "px" : "auto" };
+
+    min-width: ${(props) => props.minWidth ? String(props.minWidth) + "px" : "0" };
 
     padding-top: ${(props) => props.paddingTop ? String(props.paddingTop) + "px" : "0px" };
     padding-right: ${(props) => props.paddingRight ? String(props.paddingRight) + "px" : "0px" };

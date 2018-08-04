@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 interface Props {
     className?: string;
+
+    margin?: string;
+
+    minWidth?: number;
 }
 
 class FlexColWrapper extends React.Component<Props> {
@@ -24,4 +28,8 @@ export default styled(FlexColWrapper)`
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    margin: ${(props) => props.margin ? props.margin : "0" };
+
+    min-width: ${(props) => props.minWidth ? String(props.minWidth) + "px" : "0" };
 `;

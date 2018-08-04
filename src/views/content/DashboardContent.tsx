@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Section from "../components/Section";
+import BoxWrapper from "../wrappers/BoxWrapper";
 import ContentWrapper from '../wrappers/ContentWrapper';
 import FlexColWrapper from '../wrappers/FlexColWrapper';
 import FlexRowWrapper from '../wrappers/FlexRowWrapper';
@@ -9,9 +9,9 @@ interface Props {
     className?: string;
 }
 
-const contentPadding = "0.8%";
-const sectionMargin = "0.4%";
-const rowMargin = "0.1%";
+const contentPadding = "1.2%";
+const boxMargin = ".8%";
+const rowMargin = "0.2%";
 
 class DashboardContent extends React.Component<Props> {
     constructor(props: Props) {
@@ -23,12 +23,32 @@ class DashboardContent extends React.Component<Props> {
             <ContentWrapper padding={contentPadding}>
                 <FlexColWrapper>
                     <FlexRowWrapper margin={rowMargin}>
-                        <Section text={"one"} margin={sectionMargin}/>
-                        <Section text={"two"} margin={sectionMargin}/>
+                        <BoxWrapper margin={boxMargin}>
+                            <span>Graph Here</span>
+                        </BoxWrapper>
                     </FlexRowWrapper>
-                    <FlexRowWrapper margin={rowMargin}>
-                        <Section text={"three"} margin={sectionMargin}/>
-                        <Section text={"four"} margin={sectionMargin}/>
+                    <FlexRowWrapper flexWrap={"wrap"}>
+                        <FlexColWrapper minWidth={200} margin={rowMargin}>
+                            <FlexRowWrapper>
+                                <BoxWrapper margin={boxMargin}>
+                                    <span>one</span>
+                                </BoxWrapper>
+                                <BoxWrapper margin={boxMargin}>
+                                    <span>two</span>
+                                </BoxWrapper>
+                            </FlexRowWrapper>
+                            <FlexRowWrapper>
+                                <BoxWrapper margin={boxMargin}>
+                                <span>three</span>
+                                </BoxWrapper>
+                                <BoxWrapper margin={boxMargin}>
+                                    <span>four</span>
+                                </BoxWrapper>
+                            </FlexRowWrapper>
+                        </FlexColWrapper>
+                        <FlexColWrapper minWidth={200} margin={rowMargin}>
+                            <BoxWrapper margin={boxMargin}/>
+                        </FlexColWrapper>
                     </FlexRowWrapper>
                 </FlexColWrapper>
             </ContentWrapper>
