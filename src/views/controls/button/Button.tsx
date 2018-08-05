@@ -10,6 +10,7 @@ interface Props {
 
     colorType: ColorType;
     colorPressed?: ColorType;
+    colorHeader?: ColorType;
 
     isDisabled?: boolean;
     icon?: string;
@@ -48,30 +49,28 @@ class Button extends React.Component<Props> {
         const {
             className,
             id,
-            isDisabled,
+            // isDisabled,
             icon,
+            colorHeader,
             onClick,
             text,
-            form,
+            // form,
             tooltip,
         } = this.props;
 
         return (
-            <button
+            <div
                 className={className}
                 id={id}
-                disabled={isDisabled}
                 onClick={onClick}
-                form={form}
                 title={tooltip}
             >
-                {icon &&
-                    <i className="icon material-icons">{icon}</i>
-                }
+                { colorHeader && <div className={"btn-header"}/>}
+                { icon && <i className="icon material-icons">{icon}</i> }
                 <span>
                     {text}
                 </span>
-            </button>
+            </div>
         );
     }
 
@@ -79,6 +78,7 @@ class Button extends React.Component<Props> {
 
 export default styled(Button)`
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: ${(props) => props.justifyContent ? props.justifyContent : "center"};
 
@@ -97,6 +97,10 @@ export default styled(Button)`
     props.theme[props.colorType]};
 
     &:hover {
+
+        .btn-header {
+            background-color: ${(props) => props.colorHeader ? props.theme[props.colorHeader + "Hover"] : "transparent"};
+        }
 
         span, i {
             color: ${(props) =>
@@ -134,5 +138,13 @@ export default styled(Button)`
             props.theme[props.colorPressed + "PressedFont"] :
             props.theme[props.colorType + "PressedFont"]) :
         props.theme[props.colorType + "Font"] };
+    }
+
+    .btn-header {
+        width: 100%;
+        height: 20%;
+        min-height: 20%;
+        max-height: 20%;
+        background-color: ${(props) => props.colorHeader ? props.theme[props.colorHeader] : "transparent"};
     }
 `;

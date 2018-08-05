@@ -5,4 +5,7 @@ export enum ColorType {
     Tertiary = "tertiary",
     Quarternary = "quarternay",
     Quinary = "quinary",
+    Senary = "senary",
+    Septenary = "septenary",
+    Octonary = "octonary",
 }

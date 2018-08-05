@@ -9,6 +9,9 @@ import { allData } from "../../constants/TopGraphMockData";
 import BottomGraph from "../components/dashboard/BottomGraph";
 import TopGraph from "../components/dashboard/TopGraph";
 
+import Button from "../controls/button/Button";
+import { ColorType } from "../controls/button/constants/ColorType";
+
 interface Props {
     className?: string;
 }
@@ -35,18 +38,46 @@ class DashboardContent extends React.Component<Props> {
                         <FlexColWrapper minHeight={"50%"} minWidth={260} margin={rowMargin}>
                             <FlexRowWrapper margin={rowMargin}>
                                 <BoxWrapper margin={boxMargin}>
-                                    <span>one</span>
+                                    <Button
+                                        colorType={ColorType.Secondary}
+                                        colorHeader={ColorType.Quinary}
+                                        justifyContent={"flex-start"}
+                                        height={"100%"}
+                                        width={"100%"}
+                                        icon={"markunread"}
+                                    />
                                 </BoxWrapper>
                                 <BoxWrapper margin={boxMargin}>
-                                    <span>two</span>
+                                    <Button
+                                        colorType={ColorType.Secondary}
+                                        colorHeader={ColorType.Senary}
+                                        justifyContent={"flex-start"}
+                                        height={"100%"}
+                                        width={"100%"}
+                                        icon={"keyboard_voice"}
+                                    />
                                 </BoxWrapper>
                             </FlexRowWrapper>
                             <FlexRowWrapper margin={rowMargin}>
                                 <BoxWrapper margin={boxMargin}>
-                                    <span>three</span>
+                                    <Button
+                                        colorType={ColorType.Secondary}
+                                        colorHeader={ColorType.Septenary}
+                                        justifyContent={"flex-start"}
+                                        height={"100%"}
+                                        width={"100%"}
+                                        icon={"commute"}
+                                    />
                                 </BoxWrapper>
                                 <BoxWrapper margin={boxMargin}>
-                                    <span>four</span>
+                                    <Button
+                                        colorType={ColorType.Secondary}
+                                        colorHeader={ColorType.Octonary}
+                                        justifyContent={"flex-start"}
+                                        height={"100%"}
+                                        width={"100%"}
+                                        icon={"style"}
+                                    />
                                 </BoxWrapper>
                             </FlexRowWrapper>
                         </FlexColWrapper>

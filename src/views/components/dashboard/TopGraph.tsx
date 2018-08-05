@@ -55,10 +55,10 @@ class TopGraph extends React.Component<Props> {
                     <YAxis/>
                     {/* <Tooltip/> */}
                     {/* <Legend /> */}
-                    <Line type="natural" dataKey="pv" stroke={"#01C0C8"}/>
-                    <Line type="natural" dataKey="uv" stroke={"#AB8CE4"}/>
-                    <Line type="natural" dataKey="amt" stroke={"#00C292"}/>
-                    <Line type="natural" dataKey="tc" stroke={"#FB9678"}/>
+                    <Line type="natural" dataKey="pv" stroke={"#01C0C8"} strokeWidth={3} />
+                    <Line type="natural" dataKey="uv" stroke={"#AB8CE4"} strokeWidth={3} />
+                    <Line type="natural" dataKey="amt" stroke={"#00C292"} strokeWidth={3} />
+                    <Line type="natural" dataKey="tc" stroke={"#FB9678"} strokeWidth={3} />
                 </LineChart>
                 </ResponsiveContainer>
             </div>
