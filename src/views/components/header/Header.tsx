@@ -1,8 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import HeaderButton from './HeaderButton';
-import HeaderTitle from './HeaderTitle';
+// import Button from '../../controls/button/Button';
+// import { ColorType } from '../../controls/button/constants/ColorType';
+
+import FlexRowWrapper from '../../wrappers/FlexRowWrapper';
+import Divider from '../Divider';
 
 interface Props {
     className?: string;
@@ -22,24 +25,34 @@ class HeaderBar extends React.Component<Props> {
     public render() {
         return (
             <div id="header" className={this.props.className} >
-                <HeaderTitle />
-                <ul>
-                    <HeaderButton
-                        icon={"notifications"}
-                        tooltip={"Notifications"}
-                        onClick={this.callNotifications}
+                <FlexRowWrapper justifyContent={"flex-start"}>
+                    <div style={{width: "49px", height:"100%"}}/>
+                    <Divider
+                        isVertical={true}
+                        // marginTop={6}
+                        // marginBottom={6}
+                        // marginRight={6}
+                        // marginLeft={0}
                     />
-                    <HeaderButton
-                        icon={"settings"}
-                        tooltip={"Settings"}
-                        onClick={this.callSettings}
+                </FlexRowWrapper>
+                <FlexRowWrapper justifyContent={"flex-end"} >
+                    {/* <ConnectedThemePicker /> */}
+                    <Divider
+                        isVertical={true}
+                        marginTop={6}
+                        marginRight={6}
+                        marginBottom={6}
+                        marginLeft={6}
                     />
-                    <HeaderButton
-                        icon={"person"} 
-                        tooltip={"Profile"}
-                        onClick={this.callProfile}
+                    <span>John Smith</span>
+                    <Divider
+                        isVertical={true}
+                        marginTop={6}
+                        marginRight={6}
+                        marginBottom={6}
+                        marginLeft={6}
                     />
-                </ul>
+                </FlexRowWrapper>
             </div>
         );
     }
@@ -61,26 +74,14 @@ class HeaderBar extends React.Component<Props> {
 }
 
 const StyledNavbar = styled(HeaderBar)`
-    height: 50px;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 0px 24px 0px 8px;
-    padding-left: 5px;
-    font-weight: bold;
-    font-size: 110%;
-    overflow: hidden;
-    background-color: ${props => props.theme.primary};
 
-    transition-duration: 0.2s;
+    height: 50px;
+    min-height: 50px;
 
-    ul {
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    background-color: ${(props) => props.theme.primary};
 `
 
 export default StyledNavbar;

@@ -40,32 +40,32 @@ class Navbar extends React.Component<Props> {
                         colorType={ColorType.Secondary}
                         isPressed={location === Path.dashboard}
                         icon={"dashboard"}
-                        height={60}
-                        width={60}
+                        height={"50px"}
+                        width={"50px"}
                         onClick={onDashboardClick}
                     />
                     <Button
                         colorType={ColorType.Secondary}
                         isPressed={location === Path.metrics}
                         icon={"bar_chart"}
-                        height={60}
-                        width={60}
+                        height={"50px"}
+                        width={"50px"}
                         onClick={onMetricsClick}
                     />
                     <Button
                         colorType={ColorType.Secondary}
                         isPressed={location === Path.teams}
                         icon={"group"}
-                        height={60}
-                        width={60}
+                        height={"50px"}
+                        width={"50px"}
                         onClick={onTeamsClick}
                     />
                     <Button
                         colorType={ColorType.Secondary}
                         isPressed={location === Path.discussion}
                         icon={"comment"}
-                        height={60}
-                        width={60}
+                        height={"50px"}
+                        width={"50px"}
                         onClick={onDiscussionClick}
                     />
                 </FlexColWrapper>
@@ -81,9 +81,9 @@ export default styled(Navbar)`
     overflow: hidden;
     flex: 1;
 
-    width: 60px;
-    max-width: 60px;
-    min-width: 60px;
+    width: 50px;
+    max-width: 50px;
+    min-width: 50px;
 
     font-weight: bold;
 

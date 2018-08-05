@@ -25,7 +25,7 @@ const baseTheme: Theme = {
     tertiary: '#3C4452',
     tertiaryHover: '#525c6f',
     tertiaryPressed: '#262c35',
-    tertiaryFont: '#',
+    tertiaryFont: '#525c6f',
     tertiaryHoverFont: '#',
     tertiaryPressedFont: '#',
     tertiaryDivider: '#',
@@ -34,13 +34,13 @@ const baseTheme: Theme = {
     quaternary: '#353C48',
     quaternaryHover: '#',
     quaternaryPressed: '#',
-    quaternaryFont: '#',
+    quaternaryFont: '#C9CDD5',
     quaternaryHoverFont: '#',
     quaternaryPressedFont: '#',
     quarternaryDivider: '#',
 
-    // 
-    quinary: '#',
+    // Vibrant 1
+    quinary: '#01C0C8',
     quinaryHover: '#',
     quinaryPressed: '#',
     quinaryFont: '#',
@@ -48,14 +48,32 @@ const baseTheme: Theme = {
     quinaryPressedFont: '#',
     quinaryDivider: '#',
 
-    // 
-    senary: '#',
+    // Vibrant 2
+    senary: '#AB8CE4',
     senaryHover: '#',
     senaryPressed: '#',
     senaryFont: '#',
     senaryHoverFont: '#',
     senaryPressedFont: '#',
     senaryDivider: '#',
+
+    // Vibrant 3
+    septenary: '#00C292',
+    septenaryHover: '#',
+    septenaryPressed: '#',
+    septenaryFont: '#',
+    septenaryHoverFont: '#',
+    septenaryPressedFont: '#',
+    septenaryDivider: '#',
+
+    // Vibrant 4
+    octonary: '#FB9678',
+    octonaryHover: '#',
+    octonaryPressed: '#',
+    octonaryFont: '#',
+    octonaryHoverFont: '#',
+    octonaryPressedFont: '#',
+    octonaryDivider: '#',
 };
 
 export default baseTheme;

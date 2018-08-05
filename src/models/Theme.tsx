@@ -54,4 +54,22 @@ export interface Theme {
     senaryHoverFont: string;
     senaryPressedFont: string;
     senaryDivider: string;
-}
+
+    // Vibrant 3
+    septenary: string;
+    septenaryHover: string;
+    septenaryPressed: string;
+    septenaryFont: string;
+    septenaryHoverFont: string;
+    septenaryPressedFont: string;
+    septenaryDivider: string;
+
+    // Vibrant 4
+    octonary: string;
+    octonaryHover: string;
+    octonaryPressed: string;
+    octonaryFont: string;
+    octonaryHoverFont: string;
+    octonaryPressedFont: string;
+    octonaryDivider: string;
+};

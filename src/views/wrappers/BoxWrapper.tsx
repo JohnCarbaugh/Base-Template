@@ -5,6 +5,7 @@ interface Props {
     className?: string;
 
     margin?: string;
+    padding?: string;
 }
 
 class BoxWrapper extends React.Component<Props> {
@@ -29,6 +30,7 @@ export default styled(BoxWrapper)`
     transition: 0.2s;
 
     margin: ${(props) => props.margin ? props.margin : "0" };
+    padding: ${(props) => props.padding ? props.padding : "0" };
 
     color: ${props => props.theme.quaternaryFont};
     background-color: ${props => props.theme.quaternary};

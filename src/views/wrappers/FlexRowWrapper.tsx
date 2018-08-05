@@ -12,8 +12,9 @@ interface Props {
     
     minWidth?: number;
 
-    height?: number;
-    minHeight?: number;
+    height?: string;
+    minHeight?: string;
+    maxHeight?: string;
 
     paddingTop?: number;
     paddingRight?: number;
@@ -51,8 +52,9 @@ export default styled(FlexRowWrapper)`
     align-items: ${(props) => props.alignItems ? props.alignItems : "auto" };
     position: ${(props) => props.position ? props.position : "auto"};
 
-    min-height: ${(props) => props.minHeight ? String(props.minHeight) + "px" : "auto" };
-    height: ${(props) => props.height ? String(props.height) + "px" : "auto" };
+    min-height: ${(props) => props.minHeight ? props.minHeight : "auto" };
+    height: ${(props) => props.height ? props.height : "auto" };
+    max-height: ${(props) => props.maxHeight ? props.maxHeight : "auto" };
 
     min-width: ${(props) => props.minWidth ? String(props.minWidth) + "px" : "0" };
 

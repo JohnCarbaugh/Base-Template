@@ -16,14 +16,17 @@ interface Props {
     text?: string | JSX.Element | JSX.Element[];
     tooltip?: string;
 
-    height?: number;
-    width?: number;
+    justifyContent?: string;
+
+    height?: string;
+    width?: string;
     borderRadius?: number;
 
     marginTop?: number;
     marginBottom?: number;
     marginRight?: number;
     marginLeft?: number;
+    margin?: string;
 
     paddingTop?: number;
     paddingBottom?: number;
@@ -77,7 +80,7 @@ class Button extends React.Component<Props> {
 export default styled(Button)`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: ${(props) => props.justifyContent ? props.justifyContent : "center"};
 
     transition: background-color 100ms ease, color 100ms ease;
 
@@ -108,8 +111,8 @@ export default styled(Button)`
         props.theme[props.colorType + "Hover"] };
     }
 
-    height: ${(props) => props.height ? String(props.height) + "px" : "0px" };
-    width: ${(props) => props.width ? String(props.width) + "px" : "0px" };
+    height: ${(props) => props.height ? props.height : "0px" };
+    width: ${(props) => props.width ? props.width : "0px" };
 
     border: none;
     border-radius: ${(props) => props.borderRadius ? String(props.borderRadius) + "px" : "0px"};
@@ -118,6 +121,7 @@ export default styled(Button)`
     margin-right: ${(props) => props.marginRight ? String(props.marginRight) + "px" : "0px" };
     margin-bottom: ${(props) => props.marginBottom ? String(props.marginBottom) + "px" : "0px" };
     margin-left: ${(props) => props.marginLeft ? String(props.marginLeft) + "px" : "0px" };
+    margin: ${(props) => props.margin ? props.margin : "0px"}
 
     opacity: ${(props) => props.isDisabled ? 0.5 : 1};
     cursor: ${(props) => props.isDisabled ? "default" : "pointer"};

@@ -28,5 +28,7 @@ export default styled(ContentWrapper)`
     flex: 1;
     padding: ${(props) => props.padding ? props.padding : "0"};
 
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: ${(props) => props.theme.tertiary};
 `;

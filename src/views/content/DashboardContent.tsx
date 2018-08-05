@@ -5,6 +5,10 @@ import ContentWrapper from '../wrappers/ContentWrapper';
 import FlexColWrapper from '../wrappers/FlexColWrapper';
 import FlexRowWrapper from '../wrappers/FlexRowWrapper';
 
+import { allData } from "../../constants/TopGraphMockData";
+import BottomGraph from "../components/dashboard/BottomGraph";
+import TopGraph from "../components/dashboard/TopGraph";
+
 interface Props {
     className?: string;
 }
@@ -21,15 +25,15 @@ class DashboardContent extends React.Component<Props> {
     public render() {
         return (
             <ContentWrapper padding={contentPadding}>
-                <FlexColWrapper>
-                    <FlexRowWrapper margin={rowMargin}>
-                        <BoxWrapper margin={boxMargin}>
-                            <span>Graph Here</span>
+                <FlexColWrapper width={"100%"}>
+                    <FlexRowWrapper maxHeight={"40%"} margin={rowMargin}>
+                        <BoxWrapper margin={boxMargin} padding={"1%"}>
+                            <TopGraph/>
                         </BoxWrapper>
                     </FlexRowWrapper>
-                    <FlexRowWrapper flexWrap={"wrap"}>
-                        <FlexColWrapper minWidth={200} margin={rowMargin}>
-                            <FlexRowWrapper>
+                    <FlexRowWrapper flexWrap={"wrap"} margin={rowMargin}>
+                        <FlexColWrapper minHeight={"50%"} minWidth={260} margin={rowMargin}>
+                            <FlexRowWrapper margin={rowMargin}>
                                 <BoxWrapper margin={boxMargin}>
                                     <span>one</span>
                                 </BoxWrapper>
@@ -37,17 +41,19 @@ class DashboardContent extends React.Component<Props> {
                                     <span>two</span>
                                 </BoxWrapper>
                             </FlexRowWrapper>
-                            <FlexRowWrapper>
+                            <FlexRowWrapper margin={rowMargin}>
                                 <BoxWrapper margin={boxMargin}>
-                                <span>three</span>
+                                    <span>three</span>
                                 </BoxWrapper>
                                 <BoxWrapper margin={boxMargin}>
                                     <span>four</span>
                                 </BoxWrapper>
                             </FlexRowWrapper>
                         </FlexColWrapper>
-                        <FlexColWrapper minWidth={200} margin={rowMargin}>
-                            <BoxWrapper margin={boxMargin}/>
+                        <FlexColWrapper minHeight={"50%"} minWidth={260} margin={rowMargin}>
+                            <BoxWrapper margin={boxMargin}>
+                                <BottomGraph data={allData}/>
+                            </BoxWrapper>
                         </FlexColWrapper>
                     </FlexRowWrapper>
                 </FlexColWrapper>

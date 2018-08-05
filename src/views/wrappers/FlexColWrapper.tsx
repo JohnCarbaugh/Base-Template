@@ -7,6 +7,9 @@ interface Props {
     margin?: string;
 
     minWidth?: number;
+    width?: string;
+
+    minHeight?: string;
 }
 
 class FlexColWrapper extends React.Component<Props> {
@@ -32,4 +35,7 @@ export default styled(FlexColWrapper)`
     margin: ${(props) => props.margin ? props.margin : "0" };
 
     min-width: ${(props) => props.minWidth ? String(props.minWidth) + "px" : "0" };
+    width: ${(props) => props.width ? props.width : "auto"};
+
+    min-height: ${(props) => props.minHeight ? props.minHeight : "auto"};
 `;
