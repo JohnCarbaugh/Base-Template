@@ -44,7 +44,7 @@ class DashboardContent extends React.Component<Props> {
                                         justifyContent={"flex-start"}
                                         height={"100%"}
                                         width={"100%"}
-                                        icon={"markunread"}
+                                        // icon={"markunread"}
                                     />
                                 </BoxWrapper>
                                 <BoxWrapper margin={boxMargin}>
@@ -54,7 +54,7 @@ class DashboardContent extends React.Component<Props> {
                                         justifyContent={"flex-start"}
                                         height={"100%"}
                                         width={"100%"}
-                                        icon={"keyboard_voice"}
+                                        // icon={"keyboard_voice"}
                                     />
                                 </BoxWrapper>
                             </FlexRowWrapper>
@@ -66,7 +66,7 @@ class DashboardContent extends React.Component<Props> {
                                         justifyContent={"flex-start"}
                                         height={"100%"}
                                         width={"100%"}
-                                        icon={"commute"}
+                                        // icon={"commute"}
                                     />
                                 </BoxWrapper>
                                 <BoxWrapper margin={boxMargin}>
@@ -76,7 +76,7 @@ class DashboardContent extends React.Component<Props> {
                                         justifyContent={"flex-start"}
                                         height={"100%"}
                                         width={"100%"}
-                                        icon={"style"}
+                                        // icon={"style"}
                                     />
                                 </BoxWrapper>
                             </FlexRowWrapper>

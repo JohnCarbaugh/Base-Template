@@ -1,8 +1,9 @@
 import * as React from 'react';
+import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
 
-// import Button from '../../controls/button/Button';
-// import { ColorType } from '../../controls/button/constants/ColorType';
+import Button from '../../controls/button/Button';
+import { ColorType } from '../../controls/button/constants/ColorType';
 
 import FlexRowWrapper from '../../wrappers/FlexRowWrapper';
 import Divider from '../Divider';
@@ -34,6 +35,14 @@ class HeaderBar extends React.Component<Props> {
                         // marginRight={6}
                         // marginLeft={0}
                     />
+                    <MediaQuery query="(max-width: 700px)">
+                        <Button
+                            colorType={ColorType.Primary}
+                            icon={"menu"}
+                            height={"100%"}
+                            width={"50px"}
+                        />
+                    </MediaQuery>
                 </FlexRowWrapper>
                 <FlexRowWrapper justifyContent={"flex-end"} >
                     {/* <ConnectedThemePicker /> */}

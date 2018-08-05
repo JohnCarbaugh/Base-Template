@@ -95,7 +95,7 @@ class BottomGraph extends React.Component<Props> {
                 <ResponsiveContainer height={"100%"} width="100%">
                     <ScatterChart>
                         <XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
-                        <YAxis yAxisId="right" type="number" dataKey="y" name='weight' unit='kg' orientation="right"/>
+                        <YAxis yAxisId="right" type="number" dataKey="y" name='weight' unit='kg' orientation="right" hide={true}/>
                         <Scatter yAxisId="right" name='A school' data={data01} fill='#01C0C8'/>
                         <Scatter yAxisId="right" name='A school' data={data02} fill='#AB8CE4'/>
                         <Scatter yAxisId="right" name='A school' data={data03} fill='#00C292'/>
