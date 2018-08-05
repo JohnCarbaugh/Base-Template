@@ -22,7 +22,7 @@ const data = [
     {name: 'Q1', uv: 4000, pv: 2400, amt: 2400, tc: 3000},
     {name: 'Q2', uv: 3000, pv: 1398, amt: 2210, tc: 1700},
     {name: 'Q3', uv: 2000, pv: 9800, amt: 2290, tc: 6000},
-    {name: 'Q5', uv: 2780, pv: 3908, amt: 4000, tc: 1500},
+    {name: 'Q4', uv: 2780, pv: 3908, amt: 4000, tc: 1500},
 ];
 
 class TopGraph extends React.Component<Props> {

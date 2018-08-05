@@ -5,7 +5,7 @@ import {
     // PieChart,
     // Bar,
     // BarChart,
-    CartesianGrid,
+    // CartesianGrid,
 
     ResponsiveContainer,
     Scatter,
@@ -36,7 +36,7 @@ const data01 = [
     {x: 200, y: 700, z: 400},
     {x: 340, y: 350, z: 280},
     {x: 560, y: 500, z: 500},
-    {x: 230, y: 780, z: 200},
+    {x: 230, y: 720, z: 200},
     {x: 500, y: 400, z: 200},
     {x: 300, y: 500, z: 260},
     {x: 240, y: 300, z: 400},
@@ -50,7 +50,7 @@ const data01 = [
     {x: 114, y: 112, z: 242},
     {x: 190, y: 245, z: 320},
     {x: 56, y: 275, z: 230},
-    {x: 142, y: 453, z: 476},
+    {x: 142, y: 390, z: 476},
     {x: 100, y: 234, z: 250},
   ];
   const data04 = [
@@ -59,7 +59,7 @@ const data01 = [
     {x: 200, y: 700, z: 400},
     {x: 340, y: 350, z: 280},
     {x: 560, y: 500, z: 500},
-    {x: 230, y: 780, z: 200},
+    {x: 230, y: 750, z: 200},
     {x: 500, y: 400, z: 200},
     {x: 300, y: 500, z: 260},
     {x: 240, y: 300, z: 400},
@@ -95,11 +95,8 @@ class BottomGraph extends React.Component<Props> {
                 <ResponsiveContainer height={"100%"} width="100%">
                     <ScatterChart>
                         <XAxis type="number" dataKey={'x'} name='stature' unit='cm'/>
-                        <CartesianGrid />
-                        <YAxis yAxisId="left" type="number" dataKey="y" name='weight' unit='kg'/>
                         <YAxis yAxisId="right" type="number" dataKey="y" name='weight' unit='kg' orientation="right"/>
-                        {/* <Tooltip cursor={{strokeDasharray: '3 3'}}/> */}
-                        <Scatter yAxisId="left" name='A school' data={data01} fill='#01C0C8'/>
+                        <Scatter yAxisId="right" name='A school' data={data01} fill='#01C0C8'/>
                         <Scatter yAxisId="right" name='A school' data={data02} fill='#AB8CE4'/>
                         <Scatter yAxisId="right" name='A school' data={data03} fill='#00C292'/>
                         <Scatter yAxisId="right" name='A school' data={data04} fill='#FB9678'/>
