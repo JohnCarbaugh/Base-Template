@@ -10,7 +10,7 @@ react-redux-template is a boilerplate project to help start new react/redux proj
 
 ### Recommended Extensions
 - TSLint [VSCode]
-- vscode-styled-components
+- vscode-styled-components [VSCode]
 - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 - [Redux Developer Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
