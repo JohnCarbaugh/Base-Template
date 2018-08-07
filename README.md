@@ -8,9 +8,11 @@ react-redux-template is a boilerplate project to help start new react/redux proj
 - [The 5 Types Of React Application State](http://jamesknelson.com/5-types-react-application-state/)
 - [Package by features, not layers](https://hackernoon.com/package-by-features-not-layers-2d076df1964d)
 
-### Recommended Extensions [VS Code]
-- TSLint
+### Recommended Extensions
+- TSLint [VSCode]
 - vscode-styled-components
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [Redux Developer Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
 ### dev build
 
