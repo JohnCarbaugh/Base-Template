@@ -9,7 +9,10 @@ interface Props {
     minWidth?: number;
     width?: string;
 
+    height?: string;
     minHeight?: string;
+
+    overflowY?: string;
 }
 
 class FlexColWrapper extends React.Component<Props> {
@@ -37,5 +40,8 @@ export default styled(FlexColWrapper)`
     min-width: ${(props) => props.minWidth ? String(props.minWidth) + "px" : "0" };
     width: ${(props) => props.width ? props.width : "auto"};
 
+    height: ${(props) => props.height ? props.height : "auto"};
     min-height: ${(props) => props.minHeight ? props.minHeight : "auto"};
+
+    overflow-y: ${(props) => props.overflowY ? props.overflowY : "hidden"};
 `;

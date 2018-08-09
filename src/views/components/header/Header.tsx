@@ -27,20 +27,19 @@ class HeaderBar extends React.Component<Props> {
         return (
             <div id="header" className={this.props.className} >
                 <FlexRowWrapper justifyContent={"flex-start"}>
-                    <div style={{width: "49px", height:"100%"}}/>
-                    <Divider
-                        isVertical={true}
-                        // marginTop={6}
-                        // marginBottom={6}
-                        // marginRight={6}
-                        // marginLeft={0}
-                    />
-                    <MediaQuery query="(max-width: 700px)">
+                    <MediaQuery query="(max-width: 699px)">
                         <Button
                             colorType={ColorType.Primary}
                             icon={"menu"}
                             height={"100%"}
                             width={"50px"}
+                        />
+                        <Divider
+                            isVertical={true}
+                            // marginTop={6}
+                            // marginBottom={6}
+                            // marginRight={6}
+                            // marginLeft={0}
                         />
                     </MediaQuery>
                 </FlexRowWrapper>

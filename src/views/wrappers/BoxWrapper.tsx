@@ -6,6 +6,10 @@ interface Props {
 
     margin?: string;
     padding?: string;
+
+    width?: string;
+    minWidth?: string;
+    maxWidth?: string;
 }
 
 class BoxWrapper extends React.Component<Props> {
@@ -31,6 +35,10 @@ export default styled(BoxWrapper)`
 
     margin: ${(props) => props.margin ? props.margin : "0" };
     padding: ${(props) => props.padding ? props.padding : "0" };
+
+    width: ${(props) => props.width ? props.width : "auto" };
+    min-width: ${(props) => props.minWidth ? props.minWidth : "auto" };
+    max-width: ${(props) => props.maxWidth ? props.maxWidth : "auto" };
 
     color: ${props => props.theme.quaternaryFont};
     background-color: ${props => props.theme.quaternary};

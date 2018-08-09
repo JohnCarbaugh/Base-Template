@@ -26,6 +26,7 @@ interface Props {
     marginLeft?: number;
     margin?: string;
 
+    overflowX?: string;
 }
 
 class FlexRowWrapper extends React.Component<Props> {
@@ -67,4 +68,6 @@ export default styled(FlexRowWrapper)`
     margin-right: ${(props) => props.marginRight ? String(props.marginRight) + "px" : "0px" };
     margin-left: ${(props) => props.marginLeft ? String(props.marginLeft) + "px" : "0px" };
     margin: ${(props) => props.margin ? props.margin : "0" };
+
+    overflow-x: ${(props) => props.overflowX ? props.overflowX : "hidden"};
 `;
